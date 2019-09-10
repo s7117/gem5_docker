@@ -1,6 +1,8 @@
 # gem5_docker
 This Dockerfile creates an image that is setup to use the gem5 simulator.
 
+---
+
 ## Setup:
 1. Install Docker.
 1. Start Docker.
@@ -12,6 +14,8 @@ Bash should automatically start from here and you should see the gem5 repo locat
 
 To exit the container you can simply run the "exit" command. 
 
+---
+
 ## Building gem5:
 Once you get into bash via the Setup you can build the ISA executables using scons. Note that this compilation will take quite a long time to complete sometimes 10-15 minutes.
 
@@ -22,6 +26,8 @@ Legend: (See the gem5 documentation for details and all parameters -> [gem5 Docs
 
 1. ```cd ~/gem5```
 1. ```scons build/<ISA_name_in_gem5>/gem5.<version> -j<num_of_cpus>```
+
+---
 
 ## Using docker:
 
