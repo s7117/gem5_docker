@@ -12,7 +12,9 @@ Bash should automatically start from here and you should see the gem5 repo locat
 
 To exit the container you can simply run the "exit" command. 
 
-### Restarting a container
+## Using docker:
+
+### Restarting a container:
 1. Use ```docker container ls -a``` to get the id or name of the gem5 container.
 1. Use ```docker restart <container_id>``` to restart your container.
 1. Use ```docker exec -it <container_id> bash``` to access bash again.
