@@ -1,6 +1,8 @@
 # gem5_docker
 This Dockerfile creates an image that is setup to use the gem5 simulator.
 
+### You MUST build the gem5 executables inside of the docker container!
+
 ---
 
 ## Setup:

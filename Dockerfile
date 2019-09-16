@@ -21,5 +21,9 @@ RUN pip install six
 # Get a copy of gem5
 RUN hg clone http://repo.gem5.org/gem5
 
+# Create Linux Lab like file structure
+RUN mkdir /usr/local/3rdparty
+RUN mv /gem5 /usr/local/3rdparty
+
 # Run command line
 CMD ["/bin/bash"]
