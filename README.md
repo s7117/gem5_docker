@@ -2,7 +2,6 @@
 This Dockerfile creates an image that is setup to use the gem5 simulator.
 
 ### You MUST build the gem5 executables inside of the docker container!
-
 ---
 
 ## Setup:
@@ -19,15 +18,19 @@ To exit the container you can simply run the "exit" command.
 ---
 
 ## Building gem5:
-Once you get into bash via the Setup you can build the ISA executables using scons. Note that this compilation will take quite a long time to complete sometimes 10-15 minutes.
+Once you get into bash via the Setup you can build the ISA executables using scons. Note that this compilation will take quite a long time to complete sometimes 10-15 minutes or more.
+
+Rename the executables to specify them by their ISA. (i.e. gem5_X86.opt)
 
 Legend: (See the gem5 documentation for details and all parameters -> [gem5 Docs](http://gem5.org/Documentation))  
 - string ISA_name_in_gem5: X86, RISCV, ARM, etc.  
 - string version: opt, perf, etc.  
 - int num_of_cpus: integer number of CPUs/threads to use in compiling.  
 
-1. ```cd ~/gem5```
+1. ```cd /usr/local/3rdparty/gem5```
 1. ```scons build/<ISA_name_in_gem5>/gem5.<version> -j<num_of_cpus>```
+1. ```cd build/<ISA_name_in_gem5>```
+1. ```mv gem5.opt gem5_<ISA_name_in_gem5>.opt```
 
 ---
 
@@ -41,3 +44,6 @@ Legend: (See the gem5 documentation for details and all parameters -> [gem5 Docs
 ### Deleting your containers:
 1. Use ```docker container rm <container_id>``` to remove one container.
 1. User ```docker container prune``` to remove all containers.
+
+### Copy files from containers to host:
+1. Use ```docker cp <container_id>:/<path_in_docker_container> <dest_path>```
