@@ -3,7 +3,7 @@ FROM ubuntu:16.04
 LABEL maintainer="psc@email.sc.edu"
 
 # Home Directory
-#WORKDIR ~
+WORKDIR /root
 
 # Update Ubuntu
 RUN apt-get update -y
