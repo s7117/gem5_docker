@@ -1,4 +1,4 @@
-# gem5_docker
+# gem5_docker v1.0 (READY)
 This Dockerfile creates an image that is setup to use the gem5 simulator.
 
 ### You MUST build the gem5 executables inside of the docker container!
@@ -46,4 +46,4 @@ Legend: (See the gem5 documentation for details and all parameters -> [gem5 Docs
 1. User ```docker container prune``` to remove all containers.
 
 ### Copy files from containers to host:
-1. Use ```docker cp <container_id>:/<path_in_docker_container> <dest_path>```
+1. Use ```docker cp <container_id>:<path_in_docker_container> <dest_path>```
