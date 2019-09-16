@@ -7,7 +7,7 @@ RUN apt-get update -y
 RUN apt-get upgrade -y
 
 # Install packages
-RUN apt-get install vim -y
+RUN apt-get install vim htop -y
 
 # Install gem5 dependencies
 RUN apt-get install apt-utils g++ python python-pip python-dev scons \
